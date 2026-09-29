@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday, Anirban</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1&family=Jost:wght@200..600&display=swap" rel="stylesheet">
+<style>
+/* ===== MIDNIGHT & GOLD — a dark, engraved invitation card ===== */
+:root{--bg:#0b0a0d;--bg2:#17121a;--ink:#f0e6d6;--dim:rgba(240,230,214,.6);--gold:#d8b26a;--gold-lt:#f6e6bf;--gold-dp:#8a6731;--line:rgba(216,178,106,.3);--flame:#b4553f;--card:rgba(255,255,255,.028);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0a0d;--bg2:#17121a;--ink:#f0e6d6;--dim:rgba(240,230,214,.6);--gold:#d8b26a;--gold-lt:#f6e6bf;--gold-dp:#8a6731;--line:rgba(216,178,106,.3);--flame:#b4553f;--card:rgba(255,255,255,.028)}}
+:root[data-theme="dark"]{--bg:#0b0a0d;--bg2:#17121a;--ink:#f0e6d6;--dim:rgba(240,230,214,.6);--gold:#d8b26a;--gold-lt:#f6e6bf;--gold-dp:#8a6731;--line:rgba(216,178,106,.3);--flame:#b4553f;--card:rgba(255,255,255,.028)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f3ead9;--bg2:#e7d9bf;--ink:#2b1f1a;--dim:rgba(43,31,26,.62);--gold:#96712f;--gold-lt:#c9a05a;--gold-dp:#5e441a;--line:rgba(94,68,26,.3);--flame:#8c2f2a;--card:rgba(255,255,255,.4)}}
+:root[data-theme="light"]{--bg:#f3ead9;--bg2:#e7d9bf;--ink:#2b1f1a;--dim:rgba(43,31,26,.62);--gold:#96712f;--gold-lt:#c9a05a;--gold-dp:#5e441a;--line:rgba(94,68,26,.3);--flame:#8c2f2a;--card:rgba(255,255,255,.4)}
+html,body{height:100%;margin:0}
+body{background:
+  radial-gradient(120% 85% at 50% -12%,rgba(216,178,106,.16),transparent 62%),
+  radial-gradient(100% 70% at 50% 118%,rgba(180,85,63,.15),transparent 62%),
+  linear-gradient(180deg,var(--bg2),var(--bg) 58%);
+  color:var(--ink);
+  font-family:"Jost","Futura","Avenir Next",system-ui,sans-serif;
+  font-weight:300;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:24px;overflow:hidden;
+  animation:roomIn 1.4s cubic-bezier(.16,1,.3,1) both}
+/* film grain + vignette, above the page, below the content */
+body::before,body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:3}
+body::before{background:radial-gradient(120% 90% at 50% 45%,transparent 42%,rgba(0,0,0,.55) 100%)}
+body::after{opacity:.32;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+@keyframes roomIn{from{opacity:0}to{opacity:1}}
+
+/* ---- the engraved card ---- */
+.card{position:relative;z-index:1;width:min(660px,92vw);padding:clamp(30px,6.5vw,66px) clamp(22px,6vw,60px) clamp(28px,5vw,54px);
+  border:1px solid var(--line);background:var(--card);
+  box-shadow:0 40px 90px -50px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.06);
+  animation:unveil 1.3s cubic-bezier(.16,1,.3,1) both .1s}
+.card::before{content:"";position:absolute;inset:7px;border:1px solid var(--line);opacity:.42;pointer-events:none}
+/* corner ticks */
+.card::after{content:"";position:absolute;inset:14px;pointer-events:none;
+  background:
+    linear-gradient(var(--gold),var(--gold)) 0 0/1px 22px no-repeat,
+    linear-gradient(var(--gold),var(--gold)) 0 0/22px 1px no-repeat,
+    linear-gradient(var(--gold),var(--gold)) 100% 0/1px 22px no-repeat,
+    linear-gradient(var(--gold),var(--gold)) 100% 0/22px 1px no-repeat,
+    linear-gradient(var(--gold),var(--gold)) 0 100%/1px 22px no-repeat,
+    linear-gradient(var(--gold),var(--gold)) 0 100%/22px 1px no-repeat,
+    linear-gradient(var(--gold),var(--gold)) 100% 100%/1px 22px no-repeat,
+    linear-gradient(var(--gold),var(--gold)) 100% 100%/22px 1px no-repeat;
+  opacity:.85;animation:tickIn 1.4s cubic-bezier(.16,1,.3,1) both .7s}
+@keyframes unveil{from{opacity:0;clip-path:inset(0 0 100% 0);transform:translateY(14px) scale(.985)}to{opacity:1;clip-path:inset(0 0 0 0);transform:none}}
+@keyframes tickIn{from{opacity:0;clip-path:inset(0 100% 100% 0)}to{opacity:.85;clip-path:inset(0 0 0 0)}}
+.card>*{animation:rise 1s cubic-bezier(.16,1,.3,1) both}
+.card>h1{animation-delay:.34s}.rule{animation-delay:.46s}.sub{animation-delay:.56s}#go{animation-delay:.68s}#stop{animation-delay:.8s}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+/* ---- type ---- */
+h1{font-family:"Fraunces","Didot","Playfair Display",Georgia,serif;
+  font-weight:400;font-variation-settings:"SOFT" 55,"WONK" 1,"opsz" 120;
+  font-size:clamp(2.5rem,8.6vw,5.2rem);line-height:1.02;letter-spacing:-.025em;
+  margin:0 0 0;font-weight:300}
+h1 span{display:block;margin-top:.08em;
+  background:linear-gradient(100deg,var(--gold-dp) 0%,var(--gold-lt) 26%,var(--gold) 46%,var(--gold-lt) 62%,var(--gold-dp) 100%);
+  background-size:280% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 6px 26px rgba(216,178,106,.28));
+  animation:foil 9s ease-in-out infinite}
+@keyframes foil{0%,100%{background-position:120% 0}50%{background-position:-20% 0}}
+.sub{font-size:clamp(.78rem,2.4vw,1rem);letter-spacing:.34em;text-transform:uppercase;color:var(--dim);margin:26px 0 0;font-weight:300}
+
+/* ---- ornament rule ---- */
+.rule{display:flex;align-items:center;justify-content:center;gap:14px;margin:30px 0 0}
+.rule i{display:block;height:1px;width:clamp(40px,14vw,96px);background:linear-gradient(90deg,transparent,var(--gold));transform-origin:right;animation:draw 1.2s cubic-bezier(.16,1,.3,1) both .5s}
+.rule i:last-child{background:linear-gradient(90deg,var(--gold),transparent);transform-origin:left}
+.rule b{width:7px;height:7px;background:linear-gradient(140deg,var(--gold-lt),var(--gold-dp));transform:rotate(45deg);flex:none;box-shadow:0 0 14px rgba(216,178,106,.5)}
+@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* ---- buttons ---- */
+button{font:inherit;cursor:pointer;border:0;border-radius:0;transition:transform .18s cubic-bezier(.2,.8,.2,1),box-shadow .3s,background .3s,color .3s}
+button:active{transform:scale(.97)}
+button:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+#go{position:relative;overflow:hidden;margin-top:34px;isolation:isolate;
+  background:linear-gradient(180deg,var(--gold-lt),var(--gold) 52%,var(--gold-dp));
+  color:#180f14;font-size:.78rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;
+  padding:19px 46px 19px 52px;
+  box-shadow:0 18px 40px -18px rgba(216,178,106,.75),inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(0,0,0,.22)}
+#go::after{content:"";position:absolute;top:-40%;left:-140%;width:55%;height:180%;z-index:-1;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-16deg);
+  animation:sweep 5.5s cubic-bezier(.5,0,.5,1) infinite}
+#go:hover{box-shadow:0 22px 52px -16px rgba(216,178,106,.9),inset 0 1px 0 rgba(255,255,255,.7),inset 0 -1px 0 rgba(0,0,0,.22);transform:translateY(-2px)}
+#go:hover::after{animation-duration:1.5s}
+@keyframes sweep{0%{left:-140%}38%,100%{left:150%}}
+#stop{display:none;margin-top:26px;background:transparent;color:var(--dim);border:1px solid var(--line);
+  font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;padding:9px 20px}
+#stop:hover{color:var(--ink);border-color:var(--gold);box-shadow:0 0 24px -8px rgba(216,178,106,.6)}
+
+/* ---- toast ---- */
+#toast{position:fixed;left:50%;bottom:calc(30px + env(safe-area-inset-bottom,0px));z-index:4;
+  transform:translate(-50%,20px);
+  background:linear-gradient(180deg,rgba(24,18,26,.94),rgba(11,10,13,.94));
+  color:var(--ink);padding:15px 30px;border:1px solid var(--line);border-radius:0;
+  font-size:.72rem;font-weight:400;letter-spacing:.26em;text-transform:uppercase;
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  box-shadow:0 26px 60px -30px #000,inset 0 1px 0 rgba(255,255,255,.07);
+  opacity:0;pointer-events:none;transition:opacity .3s,transform .5s cubic-bezier(.16,1,.3,1);max-width:90vw}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ---- gold-leaf confetti ---- */
+.c{position:fixed;top:-24px;width:7px;height:11px;pointer-events:none;z-index:2;
+  border-radius:1px;box-shadow:0 0 8px rgba(216,178,106,.35);
+  animation:fall linear forwards}
+@keyframes fall{
+  0%{opacity:0;transform:translate3d(0,0,0) rotate(0deg)}
+  8%{opacity:1}
+  88%{opacity:1}
+  100%{opacity:0;transform:translate3d(0,110vh,0) rotate(760deg)}}
+
+@media (prefers-reduced-motion:reduce){.c{display:none}}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>Happy Birthday,<span>Anirban!</span></h1>
+<div class="rule" aria-hidden="true"><i></i><b></b><i></i></div>
+<p class="sub">here's our gift :)</p>
+<button id="go">Click me</button>
+<audio id="song" loop preload="auto" src="./anirban_noise.mp3"></audio>
+<button id="stop">Stop sound</button>
+</div>
+<div id="toast" role="alert">To stop it, click 6-7 times 😈</div>
+<script>
+var song=document.getElementById("song"),started=false,clicks=0,toastTimer;
+function showToast(){var t=document.getElementById("toast");t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(function(){t.classList.remove("show")},4000)}
+function confetti(){var cols=["linear-gradient(140deg,#f6e6bf,#8a6731)","linear-gradient(140deg,#f0e6d6,#9a8c78)","linear-gradient(140deg,#d8b26a,#5e441a)","linear-gradient(140deg,#e8a189,#7a2f22)"];for(var i=0;i<60;i++){var d=document.createElement("div");d.className="c";d.style.left=Math.random()*100+"vw";d.style.background=cols[i%4];d.style.width=(5+Math.random()*6)+"px";d.style.height=(9+Math.random()*7)+"px";d.style.animationDuration=(2.6+Math.random()*3.4)+"s";document.body.appendChild(d);setTimeout(function(e){e.remove()}.bind(null,d),6500)}}
+document.getElementById("go").addEventListener("click",function(){
+  if(!started){started=true;song.volume=1;song.play();this.textContent="Again!";document.getElementById("stop").style.display="inline-block"}
+  confetti();
+});
+document.getElementById("stop").addEventListener("click",function(){
+  clicks++;
+  if(clicks>=7){document.getElementById("toast").textContent="Pranked ya !!!!";}
+  else if(clicks===1){document.getElementById("toast").textContent="To stop it, click 6-7 times 😈";}
+  showToast();
+});
+</script>
+</body>
+</html>
